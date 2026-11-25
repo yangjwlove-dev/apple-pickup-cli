@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="530" viewBox="0 0 920 530" role="img" aria-label="apple-pickup-cli live terminal output showing Apple Store availability table and instant restock watch alerts">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f141b"/>
+      <stop offset="100%" stop-color="#0b0f14"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.38"/>
+    </filter>
+    <style>
+      .mono {
+        font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        font-size: 12.5px;
+      }
+      .title {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        fill: #8b949e;
+      }
+      .prompt { fill: #3fb950; font-weight: 700; }
+      .cmd { fill: #f0f6fc; font-weight: 600; }
+      .flag { fill: #79c0ff; }
+      .cyan { fill: #58a6ff; font-weight: 700; }
+      .cyan-reg { fill: #58a6ff; }
+      .green { fill: #3fb950; font-weight: 700; }
+      .yellow { fill: #d29922; }
+      .text { fill: #e6edf3; }
+      .head { fill: #f0f6fc; font-weight: 700; }
+      .dim { fill: #8b949e; }
+      .rule { fill: #30363d; }
+    </style>
+  </defs>
+
+  <!-- Outer Terminal Window -->
+  <rect x="16" y="12" width="888" height="500" rx="12" fill="url(#bgGrad)" stroke="#30363d" stroke-width="1.2" filter="url(#shadow)"/>
+
+  <!-- Title Bar -->
+  <path d="M28 12 H892 A12 12 0 0 1 904 24 V48 H16 V24 A12 12 0 0 1 28 12 Z" fill="#161b22"/>
+  <line x1="16" y1="48" x2="904" y2="48" stroke="#30363d" stroke-width="1"/>
+  <circle cx="38" cy="30" r="6" fill="#ff5f56"/>
+  <circle cx="58" cy="30" r="6" fill="#ffbd2e"/>
+  <circle cx="78" cy="30" r="6" fill="#27c93f"/>
+  <text x="460" y="34" text-anchor="middle" class="title">apple-pickup — zsh — 108×30</text>
+
+  <!-- Command 1: stores active -->
+  <text x="34" y="76" class="mono" xml:space="preserve"><tspan class="prompt">❯ </tspan><tspan class="cmd">apple-pickup stores </tspan><tspan class="flag">--active</tspan></text>
+
+  <text x="34" y="102" class="mono" xml:space="preserve"><tspan class="cyan">Apple Store Pickup Telemetry</tspan><tspan class="text"> [active only]  </tspan><tspan class="dim">(16 shown · 16 active · 6 in stock)</tspan></text>
+
+  <text x="34" y="128" class="mono head" xml:space="preserve">Store                     Name               City            In Stock   24h    7d  Median  Cadence</text>
+  <text x="34" y="144" class="mono rule" xml:space="preserve">────────────────────────  ─────────────────  ──────────────  ────────  ────  ────  ──────  ────────────────</text>
+
+  <text x="34" y="164" class="mono" xml:space="preserve"><tspan class="text">gb/covent-garden-r245     Covent Garden      London               </tspan><tspan class="green">5/8</tspan><tspan class="text">     9    56    6.8m  </tspan><tspan class="yellow">60s (evidence) !</tspan></text>
+  <text x="34" y="183" class="mono" xml:space="preserve"><tspan class="text">gb/regent-street-r092     Regent Street      London               </tspan><tspan class="green">5/8</tspan><tspan class="text">     9    51    3.7m  </tspan><tspan class="cyan-reg">5s (evidence)</tspan></text>
+  <text x="34" y="202" class="mono" xml:space="preserve"><tspan class="text">gb/battersea-r762         Battersea          London               </tspan><tspan class="green">5/8</tspan><tspan class="text">     7    32   10.1m  </tspan><tspan class="text">60s (evidence)</tspan></text>
+  <text x="34" y="221" class="mono" xml:space="preserve"><tspan class="text">cn/west-lake-r471         West Lake          Hangzhou             </tspan><tspan class="green">1/8</tspan><tspan class="text">    11    58    2.0m  </tspan><tspan class="text">60s (evidence)</tspan></text>
+  <text x="34" y="240" class="mono" xml:space="preserve"><tspan class="text">cn/sanlitun-r320          Sanlitun           Beijing              </tspan><tspan class="green">1/8</tspan><tspan class="text">     6    57    4.1m  </tspan><tspan class="text">60s (evidence)</tspan></text>
+  <text x="34" y="259" class="mono" xml:space="preserve"><tspan class="text">us/fifth-avenue-r095      Fifth Avenue       New York             </tspan><tspan class="dim">0/8</tspan><tspan class="text">     0   135     15s  </tspan><tspan class="yellow">60s (evidence) !</tspan></text>
+  <text x="34" y="278" class="mono" xml:space="preserve"><tspan class="text">us/soho-r032              SoHo               New York             </tspan><tspan class="dim">0/8</tspan><tspan class="text">     0    24     11s  </tspan><tspan class="cyan-reg">5s (evidence)</tspan></text>
+  <text x="34" y="297" class="mono" xml:space="preserve"><tspan class="text">jp/nagoya-sakae-r005      Nagoya Sakae       Nagoya-shi           </tspan><tspan class="dim">0/8</tspan><tspan class="text">     2     4   26.7m  </tspan><tspan class="text">60s (evidence)</tspan></text>
+
+  <text x="34" y="319" class="mono dim" xml:space="preserve">Source: RestockCheck CC BY 4.0 public telemetry</text>
+
+  <!-- Divider between commands -->
+  <line x1="34" y1="338" x2="886" y2="338" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Command 2: apple-pickup watch -->
+  <text x="34" y="364" class="mono" xml:space="preserve"><tspan class="prompt">❯ </tspan><tspan class="cmd">apple-pickup watch gb/regent-street-r092 </tspan><tspan class="flag">--sku 256GB --interval 15 --bark https://api.day.app/KEY</tspan></text>
+
+  <text x="34" y="388" class="mono dim" xml:space="preserve">Watching gb/regent-street-r092 (every 15s · sku="256GB" · alerts=bark)</text>
+  <text x="34" y="408" class="mono" xml:space="preserve"><tspan class="dim">[11:57:37] </tspan><tspan class="green">RESTOCK DETECTED</tspan><tspan class="text"> at Apple Regent Street: iPhone Duo 256GB Star White (MK2D4QN/A)</tspan></text>
+  <text x="34" y="427" class="mono" xml:space="preserve"><tspan class="dim">           [2/2 in stock · checked 23s ago]</tspan></text>
+  <text x="34" y="447" class="mono" xml:space="preserve"><tspan class="dim">[11:57:37] </tspan><tspan class="cyan-reg">Alert sent via bark [HTTP 200]</tspan></text>
+  <text x="34" y="467" class="mono dim" xml:space="preserve">[11:57:52] gb/regent-street-r092 — 2/2 in stock (already alerted) · last observation 8s ago</text>
+
+  <!-- Cursor -->
+  <text x="34" y="494" class="mono" xml:space="preserve"><tspan class="prompt">❯ </tspan></text>
+  <rect x="49" y="482" width="8" height="15" rx="1.5" fill="#58a6ff" opacity="0.85"/>
+</svg>

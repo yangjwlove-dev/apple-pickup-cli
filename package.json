@@ -1,0 +1,52 @@
+{
+  "name": "apple-pickup-cli",
+  "version": "0.1.0",
+  "description": "Zero-API-key terminal CLI for live Apple Store in-store pickup availability, restock windows, and instant webhook alerts.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yangjwlove-dev/apple-pickup-cli.git"
+  },
+  "homepage": "https://github.com/yangjwlove-dev/apple-pickup-cli#readme",
+  "bugs": {
+    "url": "https://github.com/yangjwlove-dev/apple-pickup-cli/issues"
+  },
+  "type": "module",
+  "bin": {
+    "apple-pickup": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "apple-store",
+    "apple-pickup",
+    "iphone",
+    "restock",
+    "inventory",
+    "cli",
+    "webhook",
+    "bark",
+    "discord",
+    "slack"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && chmod +x dist/cli.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "smoke": "node scripts/smoke.mjs",
+    "dev": "node dist/cli.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.3"
+  }
+}
